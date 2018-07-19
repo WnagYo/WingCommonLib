@@ -3,6 +3,7 @@ package com.wint_ti.commonlib.framework;
 import android.app.Application;
 
 import com.blankj.ALog;
+import com.blankj.utilcode.util.Utils;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.cache.CacheEntity;
 import com.lzy.okgo.cache.CacheMode;
@@ -72,5 +73,7 @@ public class CommonLib {
                 .setStackDeep(1)// log 栈深度，默认为 1
                 .setStackOffset(0);// 设置栈偏移，比如二次封装的话就需要设置，默认为 0
         ALog.d(config.toString());
+
+        Utils.init(application);//初始化工具类
     }
 }
